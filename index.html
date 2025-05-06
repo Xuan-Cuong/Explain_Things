@@ -1,0 +1,31 @@
+<script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^0.7.0",
+      "marked": "https://esm.sh/marked@^15.0.7"
+    }
+  }
+</script>
+<div class="container">
+  <h1>Explained with Your Image or a Fun Story</h1>
+  <p>Examples:</p>
+  <ul id="examples">
+    <li>Explain how neural networks work.</li>
+    <li>Explain how The Matrix works.</li>
+    <li>Explain how spaghettification works.</li>
+  </ul>
+ <!-- Add image input -->
+ <label for="imageInput">Upload an image (optional):</label>
+ <input type="file" id="imageInput" accept="image/*">
+ <img id="imagePreview" alt="Image preview" style="margin-top: 10px; max-width: 200px; max-height: 200px; display: none; border-radius: 6px; border: 1px solid light-dark(#ced4da, #495057);">
+  <p>or enter your own prompt:</p>
+
+  <!-- End Image Input -->
+
+  <textarea id="input" placeholder="Enter some prompt and press Enter."></textarea>
+  <div id="output"></div>
+  <div id="error" hidden></div>
+  <div id="slideshow" hidden></div>
+</div>
+<link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
